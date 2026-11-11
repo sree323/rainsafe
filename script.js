@@ -1,5 +1,5 @@
 // After deploying the backend, replace the URL below with your Render service URL.
-const API_BASE_URL = "https://YOUR-RENDER-SERVICE.onrender.com/api";
+const API_BASE_URL = "https://rainsafe-98q9.onrender.com/api";
 const reportsList = document.getElementById("reportsList");
 const form = document.getElementById("reportForm");
 const formMessage = document.getElementById("formMessage");
