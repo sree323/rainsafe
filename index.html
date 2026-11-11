@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RainSafe | Community Rain & Flood Safety</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">☔</span> RainSafe</a>
+    <nav><a href="#features">Features</a><a href="#report">Report an issue</a><a href="#reports">Community reports</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">COMMUNITY WEATHER & ROAD SAFETY</p>
+        <h1>Stay aware.<br><span>Stay safe in the rain.</span></h1>
+        <p class="intro">Share waterlogging and rain-related road hazards in your area so your community can make safer decisions.</p>
+        <a class="primary-link" href="#report">Report a hazard <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Rain cloud illustration">
+        <div class="sun"></div><div class="cloud">☁</div><div class="raindrops">💧　💧<br>　💧　💧</div>
+        <div class="road">〰️　〰️　〰️</div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <article class="feature"><div class="feature-icon">🌧️</div><h3>Rain awareness</h3><p>Keep track of community-submitted rain and waterlogging updates.</p></article>
+      <article class="feature"><div class="feature-icon">⚠️</div><h3>Hazard reporting</h3><p>Report flooded roads, fallen branches and other rain-related risks.</p></article>
+      <article class="feature"><div class="feature-icon">🤝</div><h3>Community support</h3><p>Share useful local information to help others plan safer routes.</p></article>
+    </section>
+
+    <section id="report" class="panel">
+      <div class="section-heading"><p class="eyebrow">HELP YOUR COMMUNITY</p><h2>Report a rain-related hazard</h2><p>Enter accurate information. Do not put yourself in danger to take photos or submit a report.</p></div>
+      <form id="reportForm">
+        <div class="form-grid">
+          <label>Your name (optional)<input name="name" maxlength="60" placeholder="e.g. Sree" /></label>
+          <label>Location *<input name="location" required maxlength="120" placeholder="Area / street / landmark" /></label>
+          <label>Hazard type *
+            <select name="type" required>
+              <option value="">Select hazard</option>
+              <option>Waterlogging</option><option>Flooded road</option><option>Fallen tree / branch</option><option>Damaged road</option><option>Other rain-related hazard</option>
+            </select>
+          </label>
+          <label>Severity *
+            <select name="severity" required><option value="">Select severity</option><option>Low</option><option>Medium</option><option>High</option></select>
+          </label>
+        </div>
+        <label>Description *<textarea name="description" required maxlength="500" rows="4" placeholder="Describe what you observed..."></textarea></label>
+        <button class="primary-button" type="submit">Submit report</button>
+        <p id="formMessage" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="reports" class="reports-section">
+      <div class="section-heading reports-heading"><div><p class="eyebrow">LIVE COMMUNITY FEED</p><h2>Recent reports</h2></div><button id="refreshButton" class="secondary-button" type="button">↻ Refresh</button></div>
+      <div id="reportsList" class="reports-list"><p class="empty">Loading reports...</p></div>
+    </section>
+  </main>
+  <footer><strong>RainSafe</strong><span>Community-powered rain safety awareness project.</span><small>In an emergency, contact your local emergency services. This demo is not an official warning service.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
